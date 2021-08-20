@@ -8,6 +8,7 @@ app.use(express.json());
 app.get("/assets", async (req, res) => {
     const { limit = 10, offset = 0 } = req.query;
     try{
+        
         const response = await axios.get('http://api.coincap.io/v2/assets',
             {
                 params: {
